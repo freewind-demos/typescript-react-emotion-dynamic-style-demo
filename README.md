@@ -1,7 +1,8 @@
-TypeScript React Hello World Demo
+TypeScript React Emotion Css Demo
 =================================
 
-一个最简单的Typescript + react项目，使用了webpack
+可以使用Emotion方便的定义复杂的css，还可以动态定义。
+当某个emotion接收到了新的参数，会自动生成一个新的className
 
 ```
 npm install
