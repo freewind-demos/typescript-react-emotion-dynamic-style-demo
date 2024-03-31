@@ -1,8 +1,9 @@
-TypeScript React Emotion Css Demo
+TypeScript React Emotion Dynamic Style Demo
 =================================
 
-可以使用Emotion方便的定义复杂的css，还可以动态定义。
-当某个emotion接收到了新的参数，会自动生成一个新的className
+可以动态定义style。每次参数改变，都会产生一个新的class name。
+
+这个特性在zero css-runtime框架中似乎很难做到。
 
 ```
 npm install

@@ -1,24 +1,18 @@
-import React, {FC, useState} from 'react';
-import {css} from '@emotion/css';
+import { css } from '@emotion/css';
+import React, { FC, useState } from 'react';
 
 const styles = {
-  root: css`
-    border: 1px solid red
-  `,
-  text: (color: string) => css`
-    color: ${color}
+  hello: (baseFontSize: number) => css`
+    background-color: #EEEEEE;
+    font-size: ${baseFontSize * 2}px
   `
 }
-type Props = {};
 
-export const Hello: FC<Props> = ({}) => {
-  const [color, setColor] = useState<string>('')
+export const Hello: FC = () => {
+  const [baseSize, setBaseSize] = useState(10)
 
-  return <div className={styles.root}>
-    <div className={styles.text('red')}>Red</div>
-    <div className={styles.text('blue')}>Blue</div>
-    <div className={styles.text(color)}>
-      Input: <input type={'text'} value={color} onChange={event => setColor(event.target.value)}/>
-    </div>
+  return <div >
+    <div className={styles.hello(baseSize)}>Text</div>
+    <button onClick={() => setBaseSize(n => n + 1)}>Increase Size</button>
   </div>;
 }
